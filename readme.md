@@ -8,12 +8,23 @@ npm install vue feather-icons stencil-feather
 npm start
 ```
 
-In browser:
+### In browser
 ```<script src="/path/to/stencil-feather.js"></script><!-- Register automatically once loaded -->```
 
-Framework Integration:
+### Framework Integrations
 For integrations in vue, react & angular see [stenciljs](https://stenciljs.com/docs/overview) 
 
+#### Vue
+Import the stencil-feather into the 'main.js'
+stencil-feather component `f-icon` should then be available in any of the Vue components
+
+``` js
+import { applyPolyfills, defineCustomElements } from 'stencil-feather/loader';
+
+applyPolyfills().then(() => {
+  defineCustomElements();
+})
+```
 
 ## Usage
 Icons can be configured with inline props:
