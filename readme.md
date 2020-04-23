@@ -70,7 +70,8 @@ Default: 1x
 ```
 
 ## Inputs
-| Property/Attribute | Type/Default/Description |
-| name  | Type: string, Default: null, Name of Feather Icon |
-| size  | Type: string, Default: 1x, Provides one of five size classes: 2x, 3x, 4x and 5x  |
+| Property/Attribute | Type/Default/Description                                                         |
+| ------------------ | -------------------------------------------------------------------------------- |
+| name               | Type: string, Default: null, Name of Feather Icon                                |
+| size               | Type: string, Default: 1x, Provides one of five size classes: 2x, 3x, 4x and 5x  |
 
