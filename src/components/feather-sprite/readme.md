@@ -1,4 +1,4 @@
-# f-icon
+# feather-icon
 
 
 

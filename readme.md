@@ -4,7 +4,7 @@ Feather Icon web component using stencil.js and [Feather Icons](https://featheri
 ## Installation
 
 ```bash
-npm install vue feather-icons stencil-feather
+npm install feather-icons stencil-feather
 npm start
 ```
 
@@ -18,7 +18,7 @@ For integrations in vue, react & angular see [stenciljs](https://stenciljs.com/d
 
 #### Vue
 Import the stencil-feather into the 'main.js'
-stencil-feather component `f-icon` should then be available in any of the Vue components
+stencil-feather component `feather-icon` should then be available in any of the Vue components
 
 ``` js
 import { applyPolyfills, defineCustomElements } from 'stencil-feather/loader';
@@ -30,7 +30,7 @@ applyPolyfills().then(() => {
 
 #### Angular
 Import the stencil-feather into the 'main.ts'
-stencil-feather component `f-icon` should then be available in any of the Angular components
+stencil-feather component `feather-icon` should then be available in any of the Angular components
 ``` js
 import { defineCustomElements } from 'stencil-feather/loader';
 
@@ -41,7 +41,7 @@ defineCustomElements();
 
 #### React
 Import the stencil-feather into the 'index.js'
-stencil-feather component `f-icon` should then be available in any of the React components
+stencil-feather component `feather-icon` should then be available in any of the React components
 ``` js
 import { applyPolyfills, defineCustomElements } from 'stencil-feather/loader';
 
@@ -53,25 +53,31 @@ applyPolyfills().then(() => {
 ## Usage
 Icons can be configured with inline props:
 
+As an icon
 ``` html 
-<f-icon name="anchor"></f-icon>
+<feather-icon name="anchor"></feather-icon>
+```
+
+As an sprite
+``` html 
+<feather-sprite name="anchor"></feather-sprite>
 ```
 
 ## Size
-Five size classes 1x 2x, 3x, 4x and 5x
-Default: 1x
+Add any font size as em, px or rems
+Default: 1em
 
 ``` html
-  <f-icon name="activity"></f-icon> 
-  <f-icon name="activity" size="2x"></f-icon> 
-  <f-icon name="activity" size="3x"></f-icon>
-  <f-icon name="activity" size="4x"></f-icon>
-  <f-icon name="activity" size="5x"></f-icon>
+  <feather-icon name="activity"></feather-icon> 
+  <feather-icon name="activity" size="2em"></feather-icon> 
+  <feather-icon name="activity" size="3em"></feather-icon>
+  <feather-icon name="activity" size="4em"></feather-icon>
+  <feather-icon name="activity" size="5em"></feather-icon>
 ```
 
 ## Inputs
 | Property/Attribute | Type/Default/Description                                                         |
 | ------------------ | -------------------------------------------------------------------------------- |
 | name               | Type: string, Default: null, Name of Feather Icon                                |
-| size               | Type: string, Default: 1x, Provides one of five size classes: 2x, 3x, 4x and 5x  |
+| size               | Type: string, Default: 1em, Add any font size as em, px or rems                  |
 

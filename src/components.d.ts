@@ -6,36 +6,53 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface FIcon {
+    interface FeatherIcon {
+        "name": string;
+        "size": string;
+    }
+    interface FeatherSprite {
         "name": string;
         "size": string;
     }
 }
 declare global {
-    interface HTMLFIconElement extends Components.FIcon, HTMLStencilElement {
+    interface HTMLFeatherIconElement extends Components.FeatherIcon, HTMLStencilElement {
     }
-    var HTMLFIconElement: {
-        prototype: HTMLFIconElement;
-        new (): HTMLFIconElement;
+    var HTMLFeatherIconElement: {
+        prototype: HTMLFeatherIconElement;
+        new (): HTMLFeatherIconElement;
+    };
+    interface HTMLFeatherSpriteElement extends Components.FeatherSprite, HTMLStencilElement {
+    }
+    var HTMLFeatherSpriteElement: {
+        prototype: HTMLFeatherSpriteElement;
+        new (): HTMLFeatherSpriteElement;
     };
     interface HTMLElementTagNameMap {
-        "f-icon": HTMLFIconElement;
+        "feather-icon": HTMLFeatherIconElement;
+        "feather-sprite": HTMLFeatherSpriteElement;
     }
 }
 declare namespace LocalJSX {
-    interface FIcon {
+    interface FeatherIcon {
+        "name"?: string;
+        "size"?: string;
+    }
+    interface FeatherSprite {
         "name"?: string;
         "size"?: string;
     }
     interface IntrinsicElements {
-        "f-icon": FIcon;
+        "feather-icon": FeatherIcon;
+        "feather-sprite": FeatherSprite;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "f-icon": LocalJSX.FIcon & JSXBase.HTMLAttributes<HTMLFIconElement>;
+            "feather-icon": LocalJSX.FeatherIcon & JSXBase.HTMLAttributes<HTMLFeatherIconElement>;
+            "feather-sprite": LocalJSX.FeatherSprite & JSXBase.HTMLAttributes<HTMLFeatherSpriteElement>;
         }
     }
 }

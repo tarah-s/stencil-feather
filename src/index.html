@@ -3,22 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Feather</title>
-
+  <title>Stencil Feather Icons</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <script src="https://unpkg.com/feather-icons"></script>
   <script type="module" src="/build/stencil-feather.esm.js"></script>
   <script nomodule src="/build/stencil-feather.js"></script>
-
+  <style>
+    .hero {
+      box-shadow: 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05); 
+    }
+    .content {
+      align-items: center;
+      background-color: #f8f9fa;
+      box-shadow: 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05); 
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.5rem !important;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    h2 {
+      padding-bottom: 1rem;
+    }
+    .link {
+      font-weight: 600;
+      color: #ffffff;
+    }
+    code {
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
+  <a href="https://github.com/tarah-s/stencil-feather" target="_blank" style="position: fixed; top: 1rem; right: 1rem; z-index: 9999;">
+    <svg height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+  </a>
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Stencil Feather Icons
+        </h1>
+        <h2 class="subtitle">
+          Feather Icon web component using stencil.js for Vue, Angular & React to use icon as single icon or as a sprite.
+        </h2>
+        <p class="text-muted">
+          Currently 0.0.1
+          <span>•</span>
+          <a href="#icons" class="link">Icons</a>
+          <span>•</span>
+          <a href="https://github.com/tarah-s/stencil-feather" class="link">Download from Github</a>
+        </p>
+      </div>
+    </div>
+  </section>  
 
-  <f-icon name="activity"></f-icon>
-  <f-icon name="activity" size="2x"></f-icon> 
-  <f-icon name="activity" size="3x"></f-icon>
-  <f-icon name="activity" size="4x"></f-icon>
-  <f-icon name="activity" size="5x"></f-icon>
+  <section class="section" id="app">
+    <div class="container">
+      <h2 class="title" id="icons">Feather Icons</h2> 
+      <div class="columns is-multiline">
+        <div class='column is-2' v-for="(icon, key) in feather.icons" :key="key" @click="showModal(icon)">
+          <div class='content'> 
+            <feather-icon v-bind:name="icon.name" size="3em"></feather-icon>
+          </div> 
+          <p class="has-text-centered">{{icon.name}}</p>   
+        </div> 
+      </div> 
+    </div>
+  </section>
 
-</body>
+  <footer class="footer">
+    <div class="has-text-centered">
+      <p>
+        <strong>Webpack Icon System Starter</strong> by Tarah S.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script> 
+    var app = new Vue({
+      el: '#app'
+    }) 
+  </script>
+    </body> 
 </html>
-
 
  
