@@ -1,7 +1,7 @@
 {
   "name": "stencil-feather",
-  "version": "0.0.1",
-  "description": "Feather Icon web component using stencil.js and feather sprites",
+  "version": "1.0.0",
+  "description": "Feather Icon web component using stencil.js for Vue, Angular & React to use icon as single icon or as a sprite",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -12,7 +12,8 @@
   "unpkg": "dist/stencil-feather/stencil-feather.js",
   "files": [
     "dist/",
-    "loader/"
+    "loader/",
+    "readme.md"
   ],
   "scripts": {
     "build": "stencil build --docs",
