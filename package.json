@@ -1,7 +1,19 @@
 {
   "name": "stencil-feather",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Feather Icon web component using stencil.js for Vue, Angular & React to use icon as single icon or as a sprite",
+  "repository": {
+    "url": "https://github.com/tarah-s/stencil-feather"
+  },
+  "keywords": [
+    "stencil",
+    "feather",
+    "web components",
+    "icons",
+    "vue",
+    "angular",
+    "react"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
