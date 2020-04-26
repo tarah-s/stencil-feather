@@ -23,6 +23,8 @@ stencil-feather component `feather-icon` should then be available in any of the 
 ``` js
 import { applyPolyfills, defineCustomElements } from 'stencil-feather/loader';
 
+Vue.config.ignoredElements = [/feather-\w*/];
+
 applyPolyfills().then(() => {
   defineCustomElements();
 })
