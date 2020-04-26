@@ -1,5 +1,7 @@
 # Stencil Feather
-Feather Icon web component using stencil.js and [Feather Icons](https://feathericons.com/) svg sprite.[Demo](https://stencil-feather-icons.netlify.app/)
+Feather Icon web component using stencil.js for Vue, Angular & React to use icon as single icon or as a sprite.
+[Feather Icons](https://feathericons.com/)
+[Demo](https://stencil-feather-icons.netlify.app/)
 
 ## Installation
 
