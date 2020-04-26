@@ -1,5 +1,5 @@
 # Stencil Feather
-Feather Icon web component using stencil.js and [Feather Icons](https://feathericons.com/) svg sprite.
+Feather Icon web component using stencil.js and [Feather Icons](https://feathericons.com/) svg sprite.[Demo](https://stencil-feather-icons.netlify.app/)
 
 ## Installation
 
