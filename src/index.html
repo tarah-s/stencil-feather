@@ -49,7 +49,7 @@
           Feather Icon web component using stencil.js for Vue, Angular & React to use icon as single icon or as a sprite.
         </h2>
         <p class="text-muted">
-          Currently 1.0.1
+          Currently 1.0.2
           <span>•</span>
           <a href="#icons" class="link">Icons</a>
           <span>•</span>
@@ -58,12 +58,24 @@
       </div>
     </div>
   </section>  
-
   <section class="section" id="app">
-    <div class="container">
-      <h2 class="title" id="icons">Feather Icons</h2> 
+    <div class="container"> 
+      <div class="columns is-4"> 
+        <div class="column is-full ">
+          <div class="field">
+            <div class="control">
+              <input class="input is-medium" v-model="search" type="text" placeholder="Search...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns ">
+        <div class="column is-4">
+          <h1 class="title">All Feather Icons</h1>
+        </div>
+      </div> 
       <div class="columns is-multiline">
-        <div class='column is-2' v-for="(icon, key) in feather.icons" :key="key" @click="showModal(icon)">
+        <div class='column is-2' v-for="icon in filteredList">
           <div class='content'> 
             <feather-icon v-bind:name="icon.name" size="3em"></feather-icon>
           </div> 
@@ -72,22 +84,34 @@
       </div> 
     </div>
   </section>
-
-  <footer class="footer">
-    <div class="has-text-centered">
-      <p>
-        <strong>Webpack Icon System Starter</strong> by Tarah S.
-      </p>
-    </div>
-  </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script> 
     var app = new Vue({
-      el: '#app'
+      el: '#app',
+      data: {
+          search: '',
+          icons: []
+      },
+      mounted: function() {
+        this.getIcons();
+      },
+      methods: {
+        getIcons: function () {
+          return Object.keys(feather.icons).map(key => {
+            this.icons.push({name: key})
+          })
+        },
+      },
+      computed: {
+        filteredList() {
+          return this.icons.filter(item => { 
+            return item.name.toLowerCase().includes(this.search.toLowerCase())
+          })
+        }
+      }
     }) 
   </script>
-    </body> 
+  </body> 
 </html>
 
  
